@@ -1,0 +1,53 @@
+#!/bin/bash
+#
+# Author: Xuecheng Liu
+# UWNetID: xl0306
+# Homework2: part 2
+
+# check input file argument exist
+if [ $# -lt 1 ]
+  then
+  echo "Usage filename ..." 1>&2
+  exit 1
+fi
+
+# process each input file argument
+while [ $# -gt 0 ]; do
+  # check existence of file
+  if [ ! -f $1 ]; then
+    echo "$1 does not exist -skipping." 1>&2
+    shift
+    continue
+  else # make output file
+    if [ ! -f $1.spelling ]; then
+      touch  $1.spelling
+      echo "creating $1.spelling file"
+    else
+      rm $1.spelling
+      touch $1.spelling
+      echo "replacing $1.spelling file"
+    fi
+    # read each word in the file
+    while read -ra line;
+    do
+      for word in "${line[@]}";
+      do # find the word
+        if ! grep -i -q "^$word$" /usr/share/dict/words
+        then
+          echo "$word"  >> "$1.spelling"
+        fi
+      done
+    done < "$1"
+    if  [ ! -s "$1.spelling" ]
+    then
+      rm $1.spelling
+      echo "processed $1 and found 0 spelling eroors 0 of which are unique."
+    else
+      count=$( wc -l <$1.spelling )
+      ucount=$( sort -u $1.spelling| wc -l )
+      echo "processed $1 and found $count spelling errors $ucount of which are unique."
+    fi
+  fi
+  shift
+done
+

@@ -1,0 +1,48 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=latex 2021.10.31)  22 NOV 2022 16:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"wordcount.tex\csname ?\endcsname"
+(/usr/local/texlive/2021/texmf-dist/tex/latex/wordcount/wordcount.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+File: wordcount.tex 2016/06/03 v1.7 Michael Downes
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+)
+\thickmuskip=\muskip16
+\@charfontname=\skip47
+\hfuzz=\dimen138
+
+No auxiliary output files.
+
+File name [press RETURN to cancel]: -w
+-w
+Processing -w...
+
+
+
+! LaTeX Error: File `-w.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.198 \@tempa
+             ^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 246 strings out of 478995
+ 2243 string characters out of 5858209
+ 283864 words of memory out of 5000000
+ 17825 multiletter control sequences out of 15000+600000
+ 405843 words of font info for 29 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,0n,46p,135b,40s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

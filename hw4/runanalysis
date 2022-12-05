@@ -1,0 +1,43 @@
+#!/bin/bash
+# HW4
+# Xuecheng Liu
+
+# check numebr of arguments
+
+if [ "$#" -lt 2 ]
+then
+    echo "Should provide outputFileName inputURL" >&2
+    exit 1
+fi
+
+# check existence of output file
+if [ -f "$1" ]
+then
+    echo "Replacing $1" >&2
+    rm "$1"
+fi
+
+# check url list file
+if [ ! -f "$2" ]
+then
+    echo "url list file does not exist" >&2
+    exit 1
+fi
+
+# read the url list file line by line
+index=1
+while IFS= read -r line
+do
+    echo "Performing wordcount measurement on $line ..."
+    res=$( measurepage "$line" )
+    if [ $res -gt 0 ]
+    then
+        echo "...successful"
+        echo "$index $res" >> "$1"
+        index=$((index+1))
+    else
+        echo "...failure"
+    fi
+done < "$2"
+
+exit 0

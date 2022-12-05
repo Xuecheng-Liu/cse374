@@ -1,0 +1,18 @@
+#!/bin/bash
+# HW4
+# Xuecheng Liu
+
+# check number of argument
+
+if [ "$#" -lt 1 ]
+then
+    echo "Error: should provide input url" >&2
+    exit 1
+fi
+
+# write output to temp file, count and remove the temp file
+wget -O temp -q "$1"
+wordcount -w temp
+rm temp
+
+exit 0

@@ -1,0 +1,141 @@
+Script started on Tue Nov 22 16:53:55 2022
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ echo $USER
+xuechengliu
+bash-3.2$ export PATH=$PATH:$(pwd)
+bash-3.2$ echo $PATH
+/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/mysql/bin:/Users/xuechengliu/cse 374/hw/hw4
+bash-3.2$ wget https://courses.cs.washington.edu/courses/cse374/22au/calendar/le cturelist.html
+--2022-11-22 16:55:51--  https://courses.cs.washington.edu/courses/cse374/22au/calendar/lecturelist.html
+Resolving courses.cs.washington.edu (courses.cs.washington.edu)... 2607:4000:200:10::c1, 128.208.1.193
+Connecting to courses.cs.washington.edu (courses.cs.washington.edu)|2607:4000:200:10::c1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11958 (12K) [text/html]
+Saving to: ‘lecturelist.html.3’
+
+lecturelist.html.3    0%[                    ]       0  --.-KB/s               lecturelist.html.3  100%[===================>]  11.68K  --.-KB/s    in 0.001s  
+
+2022-11-22 16:55:51 (15.1 MB/s) - ‘lecturelist.html.3’ saved [11958/11958]
+
+bash-3.2$ ./geturls urllist lecturelist.html
+Warning: output file already exits and will be overwritten
+bash-3.2$ ./runanalysis dataout urllist
+Replacing dataout
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/hello.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/magic.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/printargs.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/square1.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/control.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/control2.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/fgets.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/argumentdemo.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/dangling.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/pointeradd.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/mystery.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/mystery1.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/mystery2.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/mystery3.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/mystery4.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/arraydemo.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/arraydynamic.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/factorial_orig.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/factorial_fixed.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/reverse_orig.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/reverse_fixed.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/arrdynamicwrong.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/mysterynum.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/point.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/linkedlist_1.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/linkedlist.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/linkedlistclient.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/debug.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/twice.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/main.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/speak.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/shout.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/curve.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/test.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/for.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/testfor.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/hexdemo.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+Performing wordcount measurement on https://courses.cs.washington.edu/courses/cse374/22au/lectures/ccode/buffover.c ...
+./runanalysis: line 33: [: too many arguments
+...failure
+bash-3.2$ 
